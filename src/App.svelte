@@ -105,6 +105,7 @@
 </script>
 
 <main class="max-w-lg mx-auto p-6 flex flex-col gap-3">
+  <h1 class="text-2xl font-bold text-center">副社長構文ジェネレーター</h1>
   <div class="join w-full">
     <label class="btn btn-primary join-item">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
