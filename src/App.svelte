@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import WebFont from 'webfontloader'
+  import fontCSS from '/font.css?url'
   import baseImg from './assets/base.png'
   import avatar from './assets/avatar.png'
 
@@ -97,7 +98,7 @@
       classes: false,
       custom: {
         families: ['SF Pro Text'],
-        urls: ['/font.css']
+        urls: [fontCSS]
       },
       active: () => {
         fontLoaded = true
