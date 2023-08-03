@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import WebFont from 'webfontloader'
   import baseImg from './assets/base.png'
   import avatar from './assets/avatar.png'
@@ -62,18 +63,6 @@
     return cvs
   }
 
-  WebFont.load({
-    classes: false,
-    custom: {
-      families: ['SF Pro Text'],
-      urls: ['/font.css']
-    },
-    active: () => {
-      fontLoaded = true
-      render()
-    },
-  })
-
   const render = async () => {
     output = ''
     if (!defaultAvatar) {
@@ -102,6 +91,20 @@
       output = canvas.toDataURL()
     }
   }
+
+  onMount(() => {
+    WebFont.load({
+      classes: false,
+      custom: {
+        families: ['SF Pro Text'],
+        urls: ['/font.css']
+      },
+      active: () => {
+        fontLoaded = true
+        render()
+      },
+    })
+  })
 </script>
 
 <main class="max-w-lg mx-auto p-6 flex flex-col gap-3">
